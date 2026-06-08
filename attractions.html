@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attractions | KANA ENTERTAINMENT</title>
+  <meta name="description" content="Explore our world-class attractions: VR experiences, arcade gaming, bowling, soft play, inflatables and water theme parks.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ── Mobile Drawer Navigation ── -->
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+  <div class="mobile-nav-header">
+    <a href="index.html" class="logo">
+      <div class="logo-mark">K</div>
+      <div class="logo-text">KANA<span>.</span></div>
+    </a>
+    <button class="menu-toggle" onclick="closeMobileNav()" aria-label="Close menu">
+      <span class="material-symbols-outlined">close</span>
+    </button>
+  </div>
+  <div class="mobile-nav-links">
+    <a href="index.html" class="mobile-nav-link">
+      <span class="material-symbols-outlined">home</span> Home
+    </a>
+    <a href="attractions.html" class="mobile-nav-link active">
+      <span class="material-symbols-outlined icon-filled">attractions</span> Attractions
+    </a>
+    <a href="about.html" class="mobile-nav-link">
+      <span class="material-symbols-outlined">info</span> Our Story
+    </a>
+    <a href="contact.html" class="mobile-nav-link">
+      <span class="material-symbols-outlined">location_on</span> Contact
+    </a>
+  </div>
+  <div style="padding: var(--space-6);">
+    <a href="contact.html" class="btn btn-primary btn-full">BOOK NOW</a>
+  </div>
+</nav>
+
+<!-- ── Header ── -->
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <div style="display:flex;align-items:center;gap:var(--space-5);">
+      <button class="menu-toggle" onclick="openMobileNav()" aria-label="Open menu">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+      <a href="index.html" class="logo">
+        <div class="logo-mark">K</div>
+        <div class="logo-text">KANA<span>.</span></div>
+      </a>
+    </div>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="attractions.html" class="nav-link active">Attractions</a>
+      <a href="about.html" class="nav-link">Our Story</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="contact.html" class="btn btn-primary btn-sm book-btn-desktop">BOOK NOW</a>
+    </div>
+  </div>
+</header>
+
+<div class="page-content pb-nav">
+
+<!-- ── Page Header ── -->
+<section class="section-sm" style="padding-top:var(--space-9);">
+  <div class="container">
+    <div class="section-label">
+      <div class="section-label-line"></div>
+      <span class="label-mono text-primary">Product Gallery</span>
+    </div>
+    <h1 class="display-lg reveal" style="margin-bottom:var(--space-5);">
+      Explore <span class="text-gradient">Attractions</span>
+    </h1>
+    <p class="body-lg text-muted reveal reveal-delay-1" style="max-width:500px;">
+      From cutting-edge VR to family-friendly soft play — discover every experience we offer.
+    </p>
+  </div>
+</section>
+
+<!-- ── Filter Chips ── -->
+<section style="padding-bottom:var(--space-8);">
+  <div class="container">
+    <div class="filter-group reveal" id="filterGroup">
+      <button class="filter-chip active" data-filter="all">All Products</button>
+      <button class="filter-chip" data-filter="vr">VR & Arcade</button>
+      <button class="filter-chip" data-filter="softplay">Soft Play</button>
+      <button class="filter-chip" data-filter="bowling">Bowling</button>
+      <button class="filter-chip" data-filter="inflatables">Inflatables</button>
+      <button class="filter-chip" data-filter="water">Water Theme</button>
+    </div>
+  </div>
+</section>
+
+<!-- ── Gallery Grid ── -->
+<section style="padding-bottom:var(--space-10);">
+  <div class="container">
+    <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap:var(--space-5);" id="galleryGrid">
+
+      <!-- VR & Arcade Card (Featured) -->
+      <div class="gallery-item reveal" data-category="vr" style="grid-column: 1 / -1;">
+        <div class="media-card" style="height:360px;">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGCuo7yiFJ4scxTRhRdzgeTHoQ6oKfevqr-I4sf_3QqCbiZ3w8A94DTak4XcIPnW47xinZWqF3WaA6ybIQ7_qElltLeuyZdvm5UNpLU4mp1hW9K_H73pfHCpsW1kbfaFnhy44wfwjoL3IUSD0A58ZmAwnADJXCmEqFv2M4yN5iSjSdOIisQT6LnOkXYlGh9scCUqmiHpVPmAg5Jhmy_Y8DDBpnBT2B8Q2_bcgEZhsTgf0sJp78-MMn1lQq65dD6xLpXvy3Eypyl-bk" alt="VR & Arcade Gaming Arena">
+          <div class="media-card-overlay" style="padding:var(--space-8);">
+            <div style="display:flex;align-items:center;gap:var(--space-3);margin-bottom:var(--space-3);">
+              <span class="pill pill-primary">
+                <span class="material-symbols-outlined" style="font-size:12px;">trending_up</span>
+                Hot Trend
+              </span>
+            </div>
+            <h2 class="headline-lg" style="color:#fff;margin-bottom:var(--space-3);">VR & Arcade</h2>
+            <p class="body-md text-muted" style="margin-bottom:var(--space-5);max-width:400px;">Immersive 4D experiences, full-body VR, and competitive arcade gaming in high-fidelity environments.</p>
+            <a href="contact.html" class="btn btn-primary" style="align-self:flex-start;">
+              View Gallery
+              <span class="material-symbols-outlined" style="font-size:1rem;">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Soft Play -->
+      <div class="gallery-item reveal" data-category="softplay">
+        <div class="media-card" style="height:380px;">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0LxqHiXgatp8wCnh-blpnaxMDB3QHiuuf28Vrh-dXqW3TG2hcw5UQcnqnf4ZszxB5toE7kUvfn8AH1O28-5rgyk6RFsqNKIPqxKwSlqpJWaP4FJs9KpmgB5KhdHfSyuNWW2nZq95mOhLnQsLUzN3dYcT2lsh7pclVv7USHGrtyDDgHgtKZ41W2t4YE0XAivQ87xhLYI8rav4SpJVTSKCp4W1Y9d31IkFEDR8TXVxFZ8jKRgmzAGk9qMkC0UeURHnsyrh7VCZiDbnn" alt="Soft Play Area for Kids">
+          <div class="media-card-overlay">
+            <span class="pill pill-orange" style="align-self:flex-start;margin-bottom:var(--space-3);">Family Friendly</span>
+            <h3 class="headline-md" style="color:#fff;margin-bottom:var(--space-2);">Soft Play Zone</h3>
+            <p class="body-md text-muted" style="margin-bottom:var(--space-5);">Multi-level playground with climbing walls, tunnels, slides and ball pits for endless fun.</p>
+            <a href="contact.html" class="label-mono text-primary" style="display:flex;align-items:center;gap:4px;">
+              VIEW ALL <span class="material-symbols-outlined" style="font-size:1rem;">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bowling -->
+      <div class="gallery-item reveal reveal-delay-1" data-category="bowling">
+        <div class="media-card" style="height:380px;">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAbRyQKbB2WsRCGbTtKxM1e1WxowXjB5e5nhJiY9DiuipyICNZwwFR7LuWYkkld7SL5AMYY-hY1nE0hhSzYcC8MXNLv6MkOLSzsmBp5YuldXL9Q7Dl4EbaPn_AWVGv_MCD4Lq1UWSeKrL8qYH4JIeDNXixtTTTQoS7A-WhfyGXOnH8BGOH4lAfhZ_quuhQWaV4KNA7l2pAGk2a6FJ-DQ_wKMkfC0dstHuobwhFjBwa3FdvTUhvkzcigpdG4k6lEt_MpcQ2hMIsUZ1s" alt="Premium Bowling Lanes">
+          <div class="media-card-overlay">
+            <span class="pill pill-primary" style="align-self:flex-start;margin-bottom:var(--space-3);">Social Hub</span>
+            <h3 class="headline-md" style="color:#fff;margin-bottom:var(--space-2);">Premium Bowling</h3>
+            <p class="body-md text-muted" style="margin-bottom:var(--space-5);">Glowing neon lanes, luxury lounge seating, and immersive scoring displays.</p>
+            <a href="contact.html" class="label-mono text-primary" style="display:flex;align-items:center;gap:4px;">
+              BOOK LANE <span class="material-symbols-outlined" style="font-size:1rem;">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Inflatables (Full-width) -->
+      <div class="gallery-item reveal" data-category="inflatables" style="grid-column: 1 / -1;">
+        <div class="media-card" style="height:320px;">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDsxZPjzlpYFJ2VLD0iyXtapYTepYX2Zgmz8MiwLzSzzy6fPU6ET21i_LFP_llOgth0XHWjaJKPY1Aybp_G0TofZkNCk7e3L2eGYk5mpN82AeG1DmnBlADrQGPlkhT3-n0opqrg1etagPsFS3lKO4H1SX4_NHlc790u8QP0yClvAa9Iz6_IKbvNzQoj9vKWtzJ9i0p0kagZYKyZ7z8pXWjfbF43QgdKMRBhPLfvY1fiZGJ-lIrSYmC2jTnkGEN5AHRVwqEHILMWwDD" alt="Inflatable Adventure Obstacle Courses">
+          <div class="media-card-overlay" style="padding:var(--space-8);">
+            <h2 class="headline-lg" style="color:#fff;margin-bottom:var(--space-3);">Inflatables & Adventure</h2>
+            <p class="body-md text-muted" style="margin-bottom:var(--space-5);max-width:420px;">Giant obstacle courses, bounce zones, and climbing towers for high-energy physical entertainment for all ages.</p>
+            <a href="contact.html" class="btn btn-ghost" style="align-self:flex-start;">
+              Explore Collection
+              <span class="material-symbols-outlined" style="font-size:1rem;">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Water Theme -->
+      <div class="gallery-item reveal" data-category="water">
+        <div class="media-card" style="height:380px;">
+          <img src="https://lh3.googleusercontent.com/aida/AP1WRLtk0B-H0wCQZ_IyKiNQYt81MeghINgvNUQpBPO0C2t1tNEIOoGmSdn4OsMZnP2H2U6oxi8YfKcp_F2KEhsnn9duX7VuWJDRdERaWpHICnDFQ3fwQRZs6bod8tfK9v4Eh6tkk8ZK1SXuvRufhgR77NGB0TqFQbQZVoWpJeAUd5gO_rHu683bviqKlLXxLaHPMTx2_8cOsOBaeL79Os6EAOmlgqJEVm2UEBiprIVoY6nm-WqU2QZKWPwoxam-" alt="Water Theme Park">
+          <div class="media-card-overlay">
+            <span class="pill pill-orange" style="align-self:flex-start;margin-bottom:var(--space-3);">Coming Soon</span>
+            <h3 class="headline-md" style="color:#fff;margin-bottom:var(--space-2);">Water Theme Park</h3>
+            <p class="body-md text-muted" style="margin-bottom:var(--space-5);">Cool down with world-class water attractions, inflatable courses, and aquatic adventures.</p>
+            <a href="contact.html" class="label-mono text-primary" style="display:flex;align-items:center;gap:4px;">
+              NOTIFY ME <span class="material-symbols-outlined" style="font-size:1rem;">notifications</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Coming Soon Placeholder -->
+      <div class="gallery-item reveal reveal-delay-1" data-category="all">
+        <div style="height:380px; border-radius:var(--radius-lg); border:2px dashed rgba(88,66,55,0.4); background:var(--surface-container); display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:var(--space-8);">
+          <span class="material-symbols-outlined text-primary float-anim" style="font-size:3rem;margin-bottom:var(--space-5);">rocket_launch</span>
+          <h3 class="headline-md" style="margin-bottom:var(--space-3);">New Attractions Coming Soon</h3>
+          <p class="body-md text-muted">Stay tuned for the latest in amusement technology and entertainment experiences.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA Section ── -->
+<section class="section-sm" style="padding-bottom:var(--space-10);">
+  <div class="container">
+    <div class="cta-banner reveal">
+      <h2 class="headline-lg" style="color:#fff;margin-bottom:var(--space-4);">Can't decide?</h2>
+      <p class="body-lg" style="color:rgba(255,255,255,0.85);margin-bottom:var(--space-7);max-width:400px;margin-inline:auto;">
+        Book a full-day pass and experience every attraction at a discounted rate.
+      </p>
+      <a href="contact.html" class="btn btn-full" style="background:#fff;color:var(--primary-container);font-weight:700;max-width:360px;margin:0 auto;">
+        BOOK FULL DAY PASS
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ── -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="logo" style="margin-bottom:var(--space-4);display:inline-flex;">
+          <div class="logo-mark">K</div>
+          <div class="logo-text">KANA<span>.</span></div>
+        </a>
+        <p class="footer-brand-desc">The ultimate multi-sensory entertainment destination for thrill-seekers and families alike.</p>
+      </div>
+      <div>
+        <h4 class="footer-heading">Explore</h4>
+        <div class="footer-links">
+          <a href="index.html" class="footer-link">Home</a>
+          <a href="attractions.html" class="footer-link">Attractions</a>
+          <a href="about.html" class="footer-link">Our Story</a>
+          <a href="contact.html" class="footer-link">Contact</a>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer-heading">Attractions</h4>
+        <div class="footer-links">
+          <a href="#" class="footer-link">VR & Arcade</a>
+          <a href="#" class="footer-link">Soft Play</a>
+          <a href="#" class="footer-link">Bowling</a>
+          <a href="#" class="footer-link">Inflatables</a>
+          <a href="#" class="footer-link">Water Theme</a>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer-heading">Legal</h4>
+        <div class="footer-links">
+          <a href="#" class="footer-link">Privacy Policy</a>
+          <a href="#" class="footer-link">Terms of Service</a>
+          <a href="#" class="footer-link">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copyright">© 2024 KANA ENTERTAINMENT. ALL RIGHTS RESERVED.</p>
+      <div class="social-links">
+        <a href="#" class="social-link" aria-label="Instagram"><span class="material-symbols-outlined" style="font-size:1.1rem;">photo_camera</span></a>
+        <a href="#" class="social-link" aria-label="Facebook"><span class="material-symbols-outlined" style="font-size:1.1rem;">group</span></a>
+        <a href="#" class="social-link" aria-label="YouTube"><span class="material-symbols-outlined" style="font-size:1.1rem;">play_circle</span></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</div><!-- end page-content -->
+
+<!-- ── Bottom Mobile Nav ── -->
+<nav class="bottom-nav" aria-label="Mobile bottom navigation">
+  <a href="index.html" class="bnav-item">
+    <span class="material-symbols-outlined">home</span> Home
+  </a>
+  <a href="attractions.html" class="bnav-item active">
+    <span class="material-symbols-outlined icon-filled">attractions</span> Attractions
+  </a>
+  <a href="about.html" class="bnav-item">
+    <span class="material-symbols-outlined">info</span> Story
+  </a>
+  <a href="contact.html" class="bnav-item">
+    <span class="material-symbols-outlined">location_on</span> Contact
+  </a>
+</nav>
+
+<script>
+// ── Sticky Header ──
+const header = document.getElementById('siteHeader');
+window.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.scrollY > 40);
+});
+
+// ── Mobile Nav ──
+function openMobileNav() {
+  document.getElementById('mobileNav').classList.add('open');
+  document.body.classList.add('no-scroll');
+}
+function closeMobileNav() {
+  document.getElementById('mobileNav').classList.remove('open');
+  document.body.classList.remove('no-scroll');
+}
+
+// ── Scroll Reveal ──
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('visible');
+  });
+}, { threshold: 0.08 });
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+// ── Filter Logic ──
+const filterBtns = document.querySelectorAll('.filter-chip');
+const galleryItems = document.querySelectorAll('.gallery-item');
+
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    galleryItems.forEach(item => {
+      if (filter === 'all' || item.dataset.category === filter) {
+        item.style.display = '';
+        setTimeout(() => { item.classList.add('visible'); }, 50);
+      } else {
+        item.classList.remove('visible');
+        setTimeout(() => { item.style.display = 'none'; }, 300);
+      }
+    });
+  });
+});
+
+// Desktop book button
+const style = document.createElement('style');
+style.textContent = `
+  @media (min-width: 768px) { .book-btn-desktop { display: inline-flex !important; } }
+  @media (max-width: 767px) { .book-btn-desktop { display: none !important; } }
+`;
+document.head.appendChild(style);
+</script>
+
+</body>
+</html>
